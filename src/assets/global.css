@@ -1,0 +1,110 @@
+/* global.css */
+body, html {
+    height: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    background-image: radial-gradient(circle, #27426a, #1e355c, #15284e, #0c1c40, #050f33);
+}
+
+#container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+#tittleContainer {
+    margin-top: 50px;
+    color: azure;
+}
+
+#videoContainer {
+    width: 360px;
+    height: 640px;
+    margin-top: 20px;
+    border: 2px solid azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    display: inline-block;
+    font-size: 16px;
+    padding: 1em 2em;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #050F33;
+    color: azure;
+    border-radius: 2em;
+    border: none;
+    outline: 2px solid black;
+    outline-offset: 3px;
+}
+
+p {
+    color: azure;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.camera-label {
+    font-size: 2.5em;
+    line-height: 34px;
+    vertical-align: middle;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: azure;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #27426a;
+    transition: .1s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
